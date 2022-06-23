@@ -21,19 +21,24 @@ $ docker run --name kubectl bitnami/kubectl:latest
 * Bitnami containers, virtual machines and cloud images use the same components and configuration approach - making it easy to switch between formats based on your project needs.
 * All our images are based on [minideb](https://github.com/bitnami/minideb) a minimalist Debian based container image which gives you a small base container image and the familiarity of a leading Linux distribution.
 * All Bitnami images available in Docker Hub are signed with [Docker Content Trust (DCT)](https://docs.docker.com/engine/security/trust/content_trust/). You can use `DOCKER_CONTENT_TRUST=1` to verify the integrity of the images.
-* Bitnami container images are released daily with the latest distribution packages available.
-
-
-> This [CVE scan report](https://quay.io/repository/bitnami/kubectl?tab=tags) contains a security report with all open CVEs. To get the list of actionable security issues, find the "latest" tag, click the vulnerability report link under the corresponding "Security scan" field and then select the "Only show fixable" filter on the next page.
+* Bitnami container images are released on a regular basis with the latest distribution packages available.
 
 ## Supported tags and respective `Dockerfile` links
 
 Learn more about the Bitnami tagging policy and the difference between rolling tags and immutable tags [in our documentation page](https://docs.bitnami.com/tutorials/understand-rolling-tags-containers/).
 
 
-* [`1.23`, `1.23-debian-10`, `1.23.5`, `1.23.5-debian-10-r18`, `latest` (1.23/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.23.5-debian-10-r18/1.23/debian-10/Dockerfile)
-* [`1.22`, `1.22-debian-10`, `1.22.8`, `1.22.8-debian-10-r18` (1.22/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.22.8-debian-10-r18/1.22/debian-10/Dockerfile)
-* [`1.21`, `1.21-debian-10`, `1.21.11`, `1.21.11-debian-10-r18` (1.21/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.21.11-debian-10-r18/1.21/debian-10/Dockerfile)
+<<<<<<< HEAD
+* [`1.24`, `1.24-debian-11`, `1.24.1`, `1.24.1-debian-11-r6`, `latest` (1.24/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.24.1-debian-11-r6/1.24/debian-11/Dockerfile)
+* [`1.23`, `1.23-debian-11`, `1.23.8`, `1.23.8-debian-11-r0` (1.23/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.23.8-debian-11-r0/1.23/debian-11/Dockerfile)
+* [`1.22`, `1.22-debian-11`, `1.22.11`, `1.22.11-debian-11-r0` (1.22/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.22.11-debian-11-r0/1.22/debian-11/Dockerfile)
+* [`1.21`, `1.21-debian-11`, `1.21.14`, `1.21.14-debian-11-r0` (1.21/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.21.14-debian-11-r0/1.21/debian-11/Dockerfile)
+=======
+* [`1.24`, `1.24-debian-11`, `1.24.1`, `1.24.1-debian-11-r5`, `latest` (1.24/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.24.1-debian-11-r5/1.24/debian-11/Dockerfile)
+* [`1.23`, `1.23-debian-11`, `1.23.7`, `1.23.7-debian-11-r5` (1.23/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.23.7-debian-11-r5/1.23/debian-11/Dockerfile)
+* [`1.22`, `1.22-debian-11`, `1.22.10`, `1.22.10-debian-11-r5` (1.22/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.22.10-debian-11-r5/1.22/debian-11/Dockerfile)
+* [`1.21`, `1.21-debian-11`, `1.21.13`, `1.21.13-debian-11-r4` (1.21/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.21.13-debian-11-r4/1.21/debian-11/Dockerfile)
+>>>>>>> parent of c24cfb9f (1.21.13-debian-11-r5 release)
 
 Subscribe to project updates by watching the [bitnami/kubectl GitHub repo](https://github.com/bitnami/bitnami-docker-kubectl).
 
@@ -54,7 +59,7 @@ $ docker pull bitnami/kubectl:[TAG]
 If you wish, you can also build the image yourself.
 
 ```console
-$ docker build -t bitnami/kubectl:latest 'https://github.com/bitnami/bitnami-docker-kubectl.git#master:1.23/debian-10'
+$ docker build -t bitnami/kubectl:latest 'https://github.com/bitnami/bitnami-docker-kubectl.git#master:1.24/debian-11'
 ```
 
 ## Configuration
@@ -76,6 +81,10 @@ It's possible to load your own configuration, which is useful if you want to con
 ```console
 $ docker run --rm --name kubectl -v /path/to/your/kube/config:/.kube/config bitnami/kubectl:latest
 ```
+
+## Branch Deprecation Notice
+
+Kubectl's branch 1.21 is no longer maintained by upstream and is now internally tagged as to be deprecated. This branch will no longer be released in our catalog a month after this notice is published, but already released container images will still persist in the registries. Valid to be removed starting on: 06-17-2022
 
 ## Contributing
 

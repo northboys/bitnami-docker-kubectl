@@ -1,3 +1,6 @@
+In order to unify the approaches followed for Bitnami containers and Bitnami Helm charts, we are moving the different `bitnami/bitnami-docker-<container>` repositories to a single monorepo `bitnami/containers`. Please follow [bitnami/containers](https://github.com/bitnami/containers) to keep you updated about the latest Bitnami images.
+
+More information here: https://blog.bitnami.com/2022/07/new-source-of-truth-bitnami-containers.html
 # Kubectl packaged by Bitnami
 
 ## What is Kubectl?
@@ -21,19 +24,16 @@ $ docker run --name kubectl bitnami/kubectl:latest
 * Bitnami containers, virtual machines and cloud images use the same components and configuration approach - making it easy to switch between formats based on your project needs.
 * All our images are based on [minideb](https://github.com/bitnami/minideb) a minimalist Debian based container image which gives you a small base container image and the familiarity of a leading Linux distribution.
 * All Bitnami images available in Docker Hub are signed with [Docker Content Trust (DCT)](https://docs.docker.com/engine/security/trust/content_trust/). You can use `DOCKER_CONTENT_TRUST=1` to verify the integrity of the images.
-* Bitnami container images are released daily with the latest distribution packages available.
-
-
-> This [CVE scan report](https://quay.io/repository/bitnami/kubectl?tab=tags) contains a security report with all open CVEs. To get the list of actionable security issues, find the "latest" tag, click the vulnerability report link under the corresponding "Security scan" field and then select the "Only show fixable" filter on the next page.
+* Bitnami container images are released on a regular basis with the latest distribution packages available.
 
 ## Supported tags and respective `Dockerfile` links
 
 Learn more about the Bitnami tagging policy and the difference between rolling tags and immutable tags [in our documentation page](https://docs.bitnami.com/tutorials/understand-rolling-tags-containers/).
 
 
-* [`1.23`, `1.23-debian-10`, `1.23.5`, `1.23.5-debian-10-r18`, `latest` (1.23/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.23.5-debian-10-r18/1.23/debian-10/Dockerfile)
-* [`1.22`, `1.22-debian-10`, `1.22.8`, `1.22.8-debian-10-r18` (1.22/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.22.8-debian-10-r18/1.22/debian-10/Dockerfile)
-* [`1.21`, `1.21-debian-10`, `1.21.11`, `1.21.11-debian-10-r18` (1.21/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.21.11-debian-10-r18/1.21/debian-10/Dockerfile)
+* [`1.24`, `1.24-debian-11`, `1.24.3`, `1.24.3-debian-11-r4`, `latest` (1.24/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.24.3-debian-11-r4/1.24/debian-11/Dockerfile)
+* [`1.23`, `1.23-debian-11`, `1.23.9`, `1.23.9-debian-11-r12` (1.23/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.23.9-debian-11-r12/1.23/debian-11/Dockerfile)
+* [`1.22`, `1.22-debian-11`, `1.22.12`, `1.22.12-debian-11-r12` (1.22/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-kubectl/blob/1.22.12-debian-11-r12/1.22/debian-11/Dockerfile)
 
 Subscribe to project updates by watching the [bitnami/kubectl GitHub repo](https://github.com/bitnami/bitnami-docker-kubectl).
 
@@ -54,7 +54,7 @@ $ docker pull bitnami/kubectl:[TAG]
 If you wish, you can also build the image yourself.
 
 ```console
-$ docker build -t bitnami/kubectl:latest 'https://github.com/bitnami/bitnami-docker-kubectl.git#master:1.23/debian-10'
+$ docker build -t bitnami/kubectl:latest 'https://github.com/bitnami/bitnami-docker-kubectl.git#master:1.24/debian-11'
 ```
 
 ## Configuration
